@@ -35,7 +35,7 @@ public class Kickoff {
         // to close a webpage-->2 methods
         //1.driver.close()
         //2.driver.quit()
-        driver.quit();
+       // driver.quit();
 
 
     }
