@@ -33,16 +33,52 @@ public class HomeWork2 {
         By passLocator=By.name(passName);
         WebElement passBox=driver.findElement(passLocator);
         passBox.sendKeys("passw0rd");
-
-       driver.findElement(By.name("login")).click();
-
         try {
-            Thread.sleep(5000);
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        //driver.findElement(By.name("login")).click();
+
+
+
+        //driver.quit();
+
+
+        driver.findElement(By.linkText("Create New Account")).click();
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        driver.findElement(By.name("firstname")).sendKeys("First");
+        driver.findElement(By.name("lastname")).sendKeys("Last");
+        driver.findElement(By.name("reg_email__")).sendKeys("989878800");
+        driver.findElement(By.id("password_step_input")).sendKeys("passw0rd123");
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+
+        }
+        driver.findElement(By.name("websubmit")).click();
+        try {
+            Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
 
         driver.quit();
+
+
+
+
+
+
+
+
+
+
 
 
 
